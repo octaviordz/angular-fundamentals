@@ -62,7 +62,7 @@ export class GitSearchComponent implements OnInit {
     // });
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.searchQuery = params.get('query');
-      this.pageIndex = parseInt(params.get('page'), 10);
+      this.pageIndex = parseInt(params.get('page'), 10) || this.pageIndex;
       this.displayQuery = params.get('query');
       this.gitSearch();
     });
