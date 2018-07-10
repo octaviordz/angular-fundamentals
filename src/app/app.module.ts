@@ -8,6 +8,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { GitSearchPagerComponent } from './git-search-pager/git-search-pager.component';
 import { GitSearchService } from './git-search.service';
 import { GitSearchComponent } from './git-search/git-search.component';
+import { TodoAppComponent } from './todo-app/todo-app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
@@ -29,6 +30,13 @@ const appRoutes: Routes = [
       title: 'Git Search'
     }
   },
+  {
+    path: 'todo',
+    component: TodoAppComponent,
+    data: {
+      title: 'Todo App'
+    }
+  },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -38,7 +46,8 @@ const appRoutes: Routes = [
     GitSearchComponent,
     NotFoundComponent,
     HomePageComponent,
-    GitSearchPagerComponent
+    GitSearchPagerComponent,
+    TodoAppComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Todo} from './todo';
+import { Todo } from './todo';
 
 @Injectable()
 export class TodoDataService {
@@ -8,8 +8,8 @@ export class TodoDataService {
   // automatic incrementing of id's
   lastId = 0;
 
-    // Placeholder for todo's
-    todos: Todo[] = [];
+  // Placeholder for todo's
+  todos: Todo[] = [];
 
   constructor() { }
 
@@ -30,8 +30,8 @@ export class TodoDataService {
   }
 
   // Simulate PUT /todos/:id
-  updateTodoById(id: number, values: Object = {}):  Todo | any {
-    const todo = this.getTodoById(id) ;
+  updateTodoById(id: number, values: Object = {}): Todo | any {
+    const todo = this.getTodoById(id);
     if (!todo) {
       return this;
     }
@@ -45,7 +45,7 @@ export class TodoDataService {
   }
 
   // Simulate GET /todos/:id
-  getTodoById(id: number):  Todo | any {
+  getTodoById(id: number): Todo | any {
     return this.todos
       .filter(todo => todo.id === id)
       .pop();
