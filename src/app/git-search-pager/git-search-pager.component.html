@@ -12,3 +12,13 @@
     <button class="link" (click)="onNext(true)" [disabled]="lastPage() || loading" [ngClass]="{ 'disabled': lastPage() || loading }">Next &gt;</button>
   </div>
 </div>
+<!--
+div [(class, "pagination"); (ngIf, (fun -> count > 0))] [
+  div [(class, "pagination")] [
+    span [(class, "page-counts")] [(value "%s - %s" getMin() getMax())]
+  ]
+  div [(class, "numbers")] [
+    button [(class, "link"); (onClick, onPrev)] [text "Previous"]
+  ]
+]
+-->
